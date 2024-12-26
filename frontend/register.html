@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RateReel - Регистрация</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="auth-page">
+    <header>
+      <div class="logo"></div>
+      <a href="index.html" class="site-title">RateReel</a>
+      <nav class="nav">
+        <a href="index.html">рецепты</a>
+        <a href="login.html">Вход</a>
+      </nav>
+    </header>
+    <main>
+      <div class="register-form-container">
+        <h1>Регистрация</h1>
+        <form action="#" method="post">
+          <label for="reg_username">Логин</label>
+          <input
+            type="text"
+            id="reg_username"
+            name="reg_username"
+            placeholder="Введите логин"
+            required
+          />
+
+          <label for="reg_password">Пароль</label>
+          <input
+            type="password"
+            id="reg_password"
+            name="reg_password"
+            placeholder="Введите пароль"
+            required
+          />
+
+          <label for="reg_password_confirm">Подтверждение пароля</label>
+          <input
+            type="password"
+            id="reg_password_confirm"
+            name="reg_password_confirm"
+            placeholder="Повторите пароль"
+            required
+          />
+
+          <div class="error-message" id="error-message">
+            Пароли должны совпадать
+          </div>
+
+          <input type="submit" value="Зарегистрироваться" />
+        </form>
+        <div class="back-link">
+          Уже есть аккаунт? <a href="login.html">Авторизация</a>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/register.js"></script>
+  </body>
+</html>

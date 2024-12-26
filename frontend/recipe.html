@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RateReel - Детали рецепта</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <a href="index.html" class="site-title">RateReel</a>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">рецепты</a>
+        <a href="#" id="nav-link">Вход</a>
+      </nav>
+    </header>
+    <main>
+      <div class="recipe-details-container">
+        <div class="recipe-poster-container">
+          <img id="recipe-poster" src="" alt="Постер рецепта" />
+        </div>
+        <div class="recipe-info">
+          <h1 id="recipe-title">Название</h1>
+          <h2>Описание</h2>
+          <p id="recipe-description">Загрузка...</p>
+
+          <h2>Рейтинг IMDB</h2>
+          <div class="recipe-rating">
+            <span class="star">★</span> <span id="imdb-rating">0</span>
+          </div>
+
+          <h2>Рейтинг RateReel</h2>
+          <div class="recipe-rating">
+            <span class="star">★</span> <span id="ratereel-rating">0</span>
+          </div>
+
+          <h2>Отзывы</h2>
+          <!-- Перенесли форму добавления отзыва выше списка отзывов -->
+          <div id="review-form-container" style="display: none">
+            <h3>Оцените рецепт</h3>
+            <!-- Упростим рейтинг: одна звезда и числовой input -->
+            <div class="review-input-container">
+              <span class="star">★</span>
+              <input
+                type="number"
+                id="review-rating-number"
+                min="1.0"
+                max="5.0"
+                step="0.1"
+                value="5.0"
+              />
+            </div>
+            <textarea id="review-content" placeholder="Ваш отзыв..."></textarea>
+            <button id="submit-review">Отправить</button>
+            <div
+              id="review-message"
+              style="
+                margin-top: 10px;
+                font-size: 18px;
+                color: #ffffff;
+                display: none;
+              "
+            ></div>
+          </div>
+
+          <div id="reviews-container">
+            <!-- Отзывы будут здесь -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/recipe.js"></script>
+  </body>
+</html>

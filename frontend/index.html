@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RateReel - Главная</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <a href="index.html" class="site-title">RateReel</a>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">рецепты</a>
+        <a href="#" id="nav-link">Вход</a>
+      </nav>
+    </header>
+    <main>
+      <div id="admin-controls" style="display: none; margin-bottom: 20px">
+        <button id="add-recipe-btn" class="submit-button">Добавить</button>
+      </div>
+      <div class="cards-container" id="cards-container">
+        <!-- Карточки рецептов будут добавляться через JS -->
+      </div>
+    </main>
+
+    <!-- Модальное окно добавления рецепта -->
+    <div class="modal-overlay" id="add-recipe-modal" style="display: none">
+      <div class="modal-content add-recipe-form-container">
+        <button class="close-modal" id="close-modal">×</button>
+        <h1>Добавление рецепта</h1>
+        <div class="add-recipe-content">
+          <div class="add-recipe-poster">
+            <div class="poster-preview" id="poster-preview"></div>
+            <label class="file-label">
+              Выбрать файл
+              <input
+                type="file"
+                id="logo-file"
+                accept="image/*"
+                style="display: none"
+              />
+            </label>
+          </div>
+          <div class="add-recipe-fields">
+            <label for="recipe-title">Название</label>
+            <input type="text" id="recipe-title" placeholder="Введите..." />
+
+            <label for="recipe-description">Описание</label>
+            <textarea
+              id="recipe-description"
+              placeholder="Введите..."
+            ></textarea>
+
+            <label>Рейтинг IMDB</label>
+            <div class="review-input-container">
+              <span class="star">★</span>
+              <input
+                type="number"
+                id="imdb-rating"
+                min="1.0"
+                max="5.0"
+                step="0.1"
+                value="5.0"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="error-message"
+          id="add-recipe-error"
+          style="display: none"
+        ></div>
+        <button id="submit-recipe" class="submit-button">Добавить</button>
+      </div>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

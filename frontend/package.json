@@ -1,0 +1,17 @@
+{
+  "name": "ratereel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "live": "live-server --no-browser --port=9000"
+  },
+  "author": "Pushkina E.A.",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.4.2"
+  }
+}

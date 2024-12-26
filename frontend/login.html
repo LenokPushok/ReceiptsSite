@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RateReel - Авторизация</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="auth-page">
+    <header>
+      <div class="logo"></div>
+      <a href="index.html" class="site-title">RateReel</a>
+      <nav class="nav">
+        <a href="index.html">рецепты</a>
+        <a href="#">Вход</a>
+      </nav>
+    </header>
+    <main>
+      <div class="login-form-container">
+        <h1>Авторизация</h1>
+        <form>
+          <label for="username">Логин</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Введите логин"
+          />
+
+          <label for="password">Пароль</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Введите пароль"
+          />
+
+          <input type="submit" value="Войти" />
+        </form>
+        <div class="register-link">
+          Нет аккаунта? <a href="register.html">Регистрация</a>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/login.js"></script>
+  </body>
+</html>
